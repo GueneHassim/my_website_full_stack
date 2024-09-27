@@ -1,0 +1,115 @@
+{% extends 'base_profile.html' %}
+
+{% block title%}
+
+about my yc grabber
+
+{%endblock%}
+
+
+
+{% block header_subtile %} Guene Project in live {% endblock %}
+
+{%block header_title %} YC Grabber {% endblock %}
+
+{% block button %}
+
+{% endblock  %}
+
+ {% block content %}
+
+
+<div class="space-div"></div>
+<div class="space-div"></div>
+
+<!--FORM-->
+
+<div class="container my-5">
+  <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+
+      <p class="lead mb-4">YC News scraper is a web app that I developed to gather and sort articles from Y Combinator's news section in real-time. Unlike the YC site, which doesn’t offer sorting options, my app allows users to organize articles by votes, comments, publication date, and more, enhancing the user experience by providing flexible viewing options.
+      <br>
+      <a href="https://news.ycombinator.com/news"  class="blog-card-link">Y Combinator news page link <i class="ti-angle-double-right"></i></a>
+      </p>
+
+      <a href="https://github.com/GueneHassim"  class="blog-card-link">Github <i class="ti-angle-double-right"></i></a>
+
+<div class="container my-5">
+
+<form class="row gx-3 gy-2 align-items-center" method="post">
+
+
+    <div class="col-sm-3">
+   <label class="visually-hidden" for="specificFieldSelect">Column</label>
+   <select name="selected_field" class="form-select" id="specificFieldSelect">
+     <option value='False' selected>Choose...</option>
+     <option value="rank">rank</option>
+     <option value="titolo">titolo</option>
+       <option value="date info">date</option>
+     <option value="periodo">periodo</option>
+       <option value="score">post</option>
+     <option value="commenti">comment</option>
+   </select>
+ </div>
+
+
+
+ <div class="col-sm-3">
+   <label class="visually-hidden" for="specificSizeSelect">order</label>
+   <select name="selected_order" class="form-select" id="specificSizeSelect">
+     <option selected value='True'>Ascending</option>
+     <option value=False>Descending</option>
+   </select>
+ </div>
+
+
+ <div class="col-auto">
+   <button type="submit" class="btn btn-primary">Submit</button>
+ </div>
+
+
+    </form>
+
+</div>
+
+
+    <div class="table-responsive small">
+      <table class="table table-striped table-sm">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>title</th>
+            <th>date info</th>
+            <th>periodo</th>
+            <th>score</th>
+            <th>commenti</th>
+            <th>url</th>
+          </tr>
+        </thead>
+        <tbody>
+            {%for post in all_posts%}
+            <tr class="tr--class">
+                <td>{{post['rank']}}</td>
+                <td>{{post['titolo']}}</td>
+                <td>{{post['date info']}}</td>
+                <td>{{post['periodo']}}</td>
+                <td>{{post['score']}}</td>
+                <td>{{post['commenti']}}</td>
+                <td><a href="{{post['url']}}">Link</a></td>
+
+            </tr>
+
+            {%endfor%}
+
+        </tbody>
+      </table>
+    </div>
+
+
+
+
+      </div>
+    </div>
+
+
+{% endblock %}

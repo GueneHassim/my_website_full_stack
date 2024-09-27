@@ -1,0 +1,59 @@
+
+
+.div-space{
+    padding-top: 30px;
+}
+
+.div-space-top{
+    padding-top: 50px;
+}
+
+.riquadro{
+    padding-left: 30px;
+    margin: 10px 10px;
+    border: 5px solid black;
+    background-color: wheat;
+
+
+}
+
+.entries{
+    margin-left: 30px;
+}
+
+.download_status{
+    color: red;
+}
+
+
+
+
+
+.tec-list-element{
+    padding: 2px;
+    display: flex;
+   list-style: None;
+   justify-content: left;
+
+}
+
+.tags{
+    display: flex;
+justify-content: flex-start;
+grid-area: auto;
+flex-wrap: wrap;
+white-space: nowrap;
+}
+
+
+.space-div{
+    padding-bottom: 20px;
+}
+
+.project-item-list-span{
+    font-weight: bold;
+}
+
+
+.download-div{
+background-color: red;}

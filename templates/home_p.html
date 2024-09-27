@@ -1,0 +1,239 @@
+{% extends 'base_profile.html' %}
+{% block title%}
+
+Guene home page
+
+{%endblock%}
+
+{% block hi_hello %} Hi! {% endblock %}
+
+{% block header_title %} I am Guene Hassim  {% endblock %}
+
+{%block header_subtile %} SOFTWARE DEV {% endblock %}
+
+
+{% block button %}
+<form method="post">
+    <button name="visit_my_work" type="submit" class="btn btn-primary">Visit My Works</button>
+
+{% endblock  %}
+
+ {% block content %}
+
+
+    <!-- about section -->
+    <section class="section pt-0" id="about">
+        <!-- container -->
+        <div class="container text-center">
+            <!-- about wrapper -->
+            <div class="about">
+                <div class="about-img-holder">
+                    <img src="./static/guene_pic_3.jpeg" class="about-img"
+                        alt="guene_img_gueneth_3 ">
+                </div>
+                <div class="about-caption">
+                    <p class="section-subtitle">Who Am I ?</p>
+                    <h2 class="section-title mb-3">About Me</h2>
+                    <p>
+                        I am a Python developer specialized in backend development with Flask,
+                        passionate about transforming complex challenges into agile and effective
+                        software solutions. My mission is to use my technical skills and solution-oriented
+                         approach to create a tangible and measurable impact on the projects I undertake,
+                         closely collaborating with dynamic teams to foster shared success and professional growth.
+                        <br>
+                    </p>
+                    <br>
+
+                    <button type="submit" name='download_cv' class="btn-rounded btn btn-outline-primary mt-4">Download CV</button>
+
+                    {% if handshake_status == False %}
+                        <p class="download_status">CV download disabled, fill out the contact form at least once to be able to download the CV</p>
+                    {% endif %}
+
+                </div>
+            </div><!-- end of about wrapper -->
+        </div><!-- end of container -->
+    </section> <!-- end of about section -->
+
+    <!-- service section -->
+    <section class="section" id="service">
+        <div class="container text-center">
+            <p class="section-subtitle">  </p>
+            <h6 class="section-title mb-6">What I Do ?</h6>
+            <!-- row -->
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="body">
+                            <img src="./static/pencil-case.svg"
+                                alt="pencil-case_gueneth"
+                                class="icon">
+                            <h6 class="title">Tecnologie</h6>
+                            <p class="subtitle">I am a versatile Python developer with expertise in backend
+                                development, OOP...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="body">
+                            <img src="./static/responsive.svg"
+                                alt="responsive_svg_gueneth"
+                                class="icon">
+                            <h6 class="title">Develop Robust Backend Systems</h6>
+
+                            <p class="subtitle">Specialize in using Flask for backend development, ensuring reliability.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="body">
+                            <img src="./static/analytics.svg"
+                                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
+                                class="icon">
+                            <h6 class="title">Perform Data Analysis and Visualization</h6>
+                            <p class="subtitle"> Utilize Pandas and Matplotlib to transform complex data into actionable insights.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="body">
+                            <img src="./static/analytics.svg"
+                                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
+                                class="icon">
+                            <h6 class="title">API Integration and Automation</h6>
+                            <p class="subtitle">Harness the power of external APIs with Requests and automate repetitive tasks</p>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end of row -->
+        </div>
+    </section><!-- end of service section -->
+
+    <!-- portfolio section -->
+    <section class="section" id="portfolio">
+        <div class="container text-center">
+            <p class="section-subtitle">What I Did ?</p>
+            <h6 class="section-title mb-6">Portfolio</h6>
+            <!-- row -->
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="{{url_for('yclive_page')}}" class="portfolio-card">
+                        <img src="./static/folio-1.jpg" class="portfolio-card-img"
+                            alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                        <span class="portfolio-card-overlay">
+                            <span class="portfolio-card-caption">
+                                <h5>Y Combinator Live Scraper Web App</h5>
+                                <p class="font-weight-normal">YC live scraper is a web application designed to efficiently aggregate and organize news from Y Combinator news page , allowing users to filter and view content according to specific preferences.</p>
+                            </span>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="{{url_for('aboutsite_page')}}" class="portfolio-card">
+                        <img class="portfolio-card-img" src="./static/folio-2.jpg" class="img-responsive rounded"
+                            alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                        <span class="portfolio-card-overlay">
+                            <span class="portfolio-card-caption">
+                                <h5>Fully developed and deployed OOP web application."</h5>
+                                    <p class="font-weight-normal">Explore the seamless blend of front-end elegance and back-end functionality in my personal portfolio website, featuring cutting-edge technologies like Flask, MongoDB, and Bootstrap 5. Discover how it brings my projects and skills to life.</p>
+                            </span>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="#" class="portfolio-card">
+                        <img class="portfolio-card-img" src="./static/folio-3.jpg" class="img-responsive rounded"
+                            alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                        <span class="portfolio-card-overlay">
+                            <span class="portfolio-card-caption">
+                                <h5>comming soon</h5>
+                                    <p class="font-weight-normal">Category: Web Templates</p>
+                            </span>
+                        </span>
+                    </a>
+                </div>
+            </div><!-- end of row -->
+        </div><!-- end of container -->
+    </section> <!-- end of portfolio section -->
+
+
+
+    <!-- section -->
+    <section class="section-sm bg-primary">
+        <!-- container -->
+        <div class="container text-center text-sm-left">
+            <!-- row -->
+            <div class="row align-items-center">
+                <div class="col-sm offset-md-1 mb-4 mb-md-0">
+                    <h6 class="title text-light">Want to work with me?</h6>
+                    <p class="m-0 text-light">Always feel Free to Contact & Hire me</p>
+                </div>
+                <div class="col-sm offset-sm-2 offset-md-3">
+                    <button name="hire_me" type="submit" class="btn btn-lg my-font btn-light rounded">Hire Me</button>
+                </div>
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </section> <!-- end of section -->
+
+
+
+    <!-- blog section -->
+    <section class="section" id="blog">
+        <!-- container -->
+        <div class="container text-center">
+            <p class="section-subtitle">Recent Posts?</p>
+            <h6 class="section-title mb-6">Blog</h6>
+            <!-- blog-wrapper -->
+            <div class="blog-card">
+                <div class="blog-card-header">
+                    <img src="./static/img-1.jpg" class="blog-card-img"
+                        alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                </div>
+                <div class="blog-card-body">
+                    <h5 class="blog-card-title"><a href="{{url_for('aboutsite_page')}}">Personal Portfolio Website</a></h5>
+
+                        <p class="blog-card-caption">
+                            <a href="#">By: {{author}}</a>
+                            <a href="#"><i class="ti-heart text-danger"></i> technologies:</a>
+                            <a href="#"><i class="ti-comment"></i>Technologies Used: HTML, CSS, Bootstrap 5, Flask, Jinja2, MongoDB, BeautifulSoup, smtplib</a>
+                        </p>
+
+                        <p>Developed a fully-functional personal portfolio website showcasing my projects and skills. The site features a clean, responsive front-end design implemented with HTML, CSS, and Bootstrap 5. On the backend, Flask and Jinja2 handle routing and page rendering, while data is managed with MongoDB.
+                            The site includes a contact form that users can fill out to reach me directly; submissions are handled by smtplib for email delivery and simultaneously backed up in MongoDB.</p>
+
+                        <a href="{{url_for('aboutsite_page')}}" class="blog-card-link">Read more <i class="ti-angle-double-right"></i></a>
+                </div>
+            </div><!-- end of blog wrapper -->
+
+            <!-- blog-wrapper -->
+            <div class="blog-card">
+                <div class="blog-card-header">
+                    <img src="./static/img-2.jpg" class="blog-card-img"
+                        alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                </div>
+                <div class="blog-card-body">
+                    <h5 class="blog-card-title"><a href="{{url_for('ycblog_page')}}">Y Combinator live scraping webapp</a></h5>
+
+                        <p class="blog-card-caption">
+                            <a href="#">By: {{author}}</a>
+                            <a href="#"><i class="ti-heart text-danger"></i> technologies:</a>
+                            <a href="#"><i class="ti-comment"></i>Technologies Used: web scraping with BeautifulSoup, Pandas, MongDB, Datetime, HTML, CSS, Bootstrap 5, Flask, Jinja2, </a>
+                        </p>
+
+                        <p>YC News Grabber is a web app that I developed to gather and sort articles from Y Combinator's news section in real-time.
+                            Unlike the YC site, which doesn’t offer sorting options, my app allows users to organize articles by votes, comments,
+                            publication date, and more, enhancing the user experience by providing flexible viewing options.</p>
+
+                        <a href="{{url_for('ycblog_page')}}" class="blog-card-link">Read more <i class="ti-angle-double-right"></i></a>
+                </div>
+            </div><!-- end of blog wrapper -->
+
+        </div><!-- end of container -->
+    </section><!-- end of blog section -->
+
+ </form>
+{% endblock %}

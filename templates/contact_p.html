@@ -1,0 +1,44 @@
+{% extends "extend_contact.html" %}
+
+{% block head %}
+		<title>contact</title>
+		{% endblock %}
+
+	{% block body %}
+
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main">
+						<header>
+							<span class="avatar"><img src="images/avatar.jpg" alt="" /></span>
+							<h1>Guene Hassim</h1>
+							<p>backend webdevelopper</p>
+						</header>
+
+						<hr />
+						<h2>Extra Stuff!</h2>
+						<form method="post" action="{{ url_for('contact_page') }}">
+							{{ form.hidden_tag() }}
+							<div class="field">
+								{{form.name}}
+							</div>
+							<div class="field">
+								{{form.email}}
+							</div>
+							<div class="field">
+								<div class="select-wrapper">
+									{{form.select_field}}
+								</div>
+							</div>
+							<div class="field">
+								{{form.message}}
+							</div>
+
+								{{form.submit}}
+
+						</form>
+						<hr />
+	{% endblock %}

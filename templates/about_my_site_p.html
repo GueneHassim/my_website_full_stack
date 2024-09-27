@@ -1,0 +1,92 @@
+{% extends 'base_profile.html' %}
+
+<!--in questo modo richiamo il mio template usato come modello e passo il titolo nel blocco titolo, cosi facendo mantengo
+template richiamandolo e passagosci il contenuto invece di riscrivere codici-->
+
+
+{% block title%}
+
+Introduction to My Website
+
+{%endblock%}
+
+
+{% block header_title %} Guene blog  {% endblock %}
+
+{%block header_subtile %} Introduction to My Personal Portfolio Website {% endblock %}
+
+ {% block content %}
+
+
+    <!-- blog section -->
+    <section class="section" id="blog">
+        <!-- container -->
+        <div class="container text-center">
+            <p class="section-subtitle">Recent Posts?</p>
+            <h6 class="section-title mb-6">Blog</h6>
+            <!-- blog-wrapper -->
+            <div class="blog-card">
+                <div class="blog-card-header">
+                    <img src="static/guene_pic_1.jpeg" class="blog-card-img"
+                        alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                </div>
+                <div class="blog-card-body">
+                    <h4 class="blog-card-title">Introduction to My Personal Portfolio Website</h4>
+
+                        <p class="blog-card-caption">
+                            <a href="#">By: {{author}}</a>
+                            <a href="#"><i class="ti-heart text-danger"></i> technologies:</a>
+                            <a href="#"><i class="ti-comment"></i>Technologies Used: HTML, CSS, Bootstrap 5, Flask, Jinja2, MongoDB, BeautifulSoup, smtplib</a>
+                        </p>
+                        <p>Welcome to my journey of creating a dynamic personal portfolio website, not just a static display like a LinkedIn or GitHub profile, but a living, breathing showcase of my skills, thoughts, and processes. This website serves as an active platform where I share my projects, insights, and the rationale behind my work.</p>
+
+                        <h6>Why I Built This Site</h6>
+                        <p>
+                            The main motivation behind developing this site was the need for a personal space that goes beyond passive profiles. I wanted a place that reflects my dynamic approach to technology—a platform where I can actively share updates, thoughts, and live demos of my work.The main motivation behind developing this site was the need for a personal space that goes beyond passive profiles. I wanted a place that reflects my dynamic approach to technology—a platform where I can actively share updates, thoughts, and live demos of my work.
+                        </p>
+
+                        <h5>Development Approach</h5>
+                        <h6>Frontend</h6>
+                        <p>
+                            I started with the frontend, crafting the user interface using HTML, CSS, and Bootstrap 5 to ensure the site is responsive and visually appealing. For those curious about Bootstrap 5 and its capabilities, <a href="https://getbootstrap.com/docs/">click here</a> for more information. The key pages developed include the homepage, project showcase, blog, live projects page, and a contact page.
+                        </p>
+
+                        <h6>Backend</h6>
+                        <p>
+                        Moving to the backend, I employed Flask, one of the most popular Python frameworks for backend development. Flask helped me establish effective routing across different pages and manage intricate interactions within the site. Using Jinja2, Flask's templating engine, I reduced redundancy and increased efficiency by utilizing the 'extend' feature, which allows reusing code across multiple pages.
+                        </p>
+                        <br>
+                        <p>
+                            Jinja2 played a crucial role in making the site dynamic. It enables the pages to be populated not by hardcoding content but by dynamically passing data from the database and files. This approach significantly enhances the site's flexibility and interactivity.
+                        </p>
+
+
+                         <h6>Evolution of the Web Application Architecture</h6>
+                        <p>
+                            Initially, the site was developed as a monolithic application. However, as the project grew in complexity, I noticed the code started to suffer from what is often referred to as the "spaghetti effect," with tangled logic and numerous session management tasks making it harder to maintain. At that point, I wasn't ready to refactor everything because it would have introduced several complications and potential issues that I preferred to handle at a later stage.
+
+After completing the first version of the project, I revisited it about a month later and decided to adopt an object-oriented approach. This shift allowed me to break down the code into more manageable components by creating specific classes. The result was a much more organized, readable, and scalable application. In particular, I modularized the scraping logic for Y Combinator and data manipulation into a dedicated class. I also built separate classes to handle email functionality
+                            and interactions with MongoDB for saving form data, such as submissions from the contact page.
+                        </p>
+                        <div>
+
+
+                        <h6>Contact Session</h6>
+                        <p>An interesting feature is the contact form, integrated using WTForms, which helps in filtering input fields for enhanced security. Upon form submission, I use the smtplib library to send an automated email confirmation and simultaneously save the submission to a MongoDB database for records. The refactor using object-oriented principles has made these processes easier to scale and maintain over time.</p>
+                        <div>
+
+                        <h6>Conclusion</h6>
+                        <p>Creating this portfolio site has been a rewarding challenge that not only improved my technical skills but also provided a platform to express my professional narrative and project accomplishments. </p>
+                        <br>
+                            <p>The architectural evolution, moving from a monolithic structure to a more organized, <b>object-oriented design</b>, was a significant learning experience that resulted in a more efficient and maintainable codebase. I invite you to explore the site, engage with the content, and connect with me through the contact form.</p>
+
+                        </div>
+
+                </div>
+            </div><!-- end of blog wrapper -->
+
+        </div><!-- end of container -->
+    </section><!-- end of blog section -->
+
+
+{% endblock %}

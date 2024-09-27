@@ -1,0 +1,40 @@
+{% extends "extend_contact.html"%}
+
+{% block head %}
+		<title>success send</title>
+{% endblock %}
+
+{% block body %}
+
+
+<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main">
+						<header>
+							<span class="avatar"><img src="images/avatar.jpg" alt="" /></span>
+							<h1>status code: 200</h1>
+							<p>Your email has been sent successfully.</p>
+							<br>
+							<p>Now you can download my CV here or in the <a href="{{url_for('home_page')}}">home page</a></p>
+						</header>
+
+						<hr />
+
+						<form method="post" action="{{ url_for('success_send_page') }}">
+							{{ and_now_form.hidden_tag() }}
+
+							<div class="field">
+								<div class="select-wrapper">
+									{{and_now_form.and_now}}
+								</div>
+							</div>
+							<div>
+								{{and_now_form.submit}}
+							</div>
+
+						</form>
+						<hr />
+
+{% endblock %}

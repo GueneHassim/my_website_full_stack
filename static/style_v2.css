@@ -1,0 +1,14 @@
+.tags{
+    display: flex;
+justify-content: flex-start;
+grid-area: tags;
+flex-wrap: wrap;
+white-space: nowrap;
+list-style: none;
+
+}
+
+.tec-list-element{
+    padding: 10px;
+
+}

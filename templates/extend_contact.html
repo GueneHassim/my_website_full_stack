@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		{% block head %}
+
+		{% endblock %}
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="./static/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="./static/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="./static/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="./static/ie8.css" /><![endif]-->
+		<noscript><link rel="stylesheet" href="./static/noscript.css" /></noscript>
+
+		 <!-- font icons -->
+    <link rel="stylesheet" href="./static/themify-icons.css">
+    <!-- Bootstrap + Meyawo main styles -->
+    <link rel="stylesheet" href="./static/meyawo.css">
+    <link rel="stylesheet" href="./static/style.css">
+    <link rel="stylesheet" href="./static/style_yc_project_page.css">
+
+
+
+	</head>
+
+
+	<body class="is-loading" data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+ <!-- Page Navbar -->
+    <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="logo" href="{{url_for('home_page')}}" >Guene</a>
+            <ul class="nav">
+                <li class="item">
+                    <a class="link" href="{{url_for('home_page')}}">Home</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#about">About</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="{{url_for('portfolio_page')}}">Portfolio</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="{{url_for('blog_page')}}">Blog</a>
+                </li>
+                <li class="item ml-md-3">
+                    <a href="{{url_for('contact_page')}}" class="btn btn-primary">Contact</a>
+                </li>
+            </ul>
+            <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
+                <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                </div>
+            </a>
+        </div>
+    </nav><!-- End of Page Navbar -->
+
+{% block body %}
+
+
+
+                        {% endblock %}
+
+			</div>
+
+		<!-- Scripts -->
+			<!--[if lte IE 8]><script src="./static/respond.min.js"></script><![endif]-->
+			<script>
+				if ('addEventListener' in window) {
+					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+				}
+			</script>
+
+	  <!-- core  -->
+    <script src="./static/jquery-3.4.1.js"></script>
+    <script src="./static/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
+    <script src="./static/bootstrap.affix.js"></script>
+
+    <!-- Meyawo js -->
+    <script src="./static/meyawo.js"></script>
+
+	</body>
+</html>
