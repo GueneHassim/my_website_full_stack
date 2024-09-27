@@ -57,10 +57,16 @@ Set up your MongoDB Atlas connection string, SMTP email details, and other envir
 
 Run the Application
 
-bash
-Copy code
-python app.py
-Access the application at http://localhost:5000.
+Notes
+
+Security: Ensure to replace placeholders like YOUR_EMAIL, YOUR DB, and YOUR DB COLLECTION with your actual data.
+SMTP Configuration: The email sending functionality requires configuring an SMTP server, currently set to Gmail in send_email.py.
+Technologies Used
+Flask for the web framework
+BeautifulSoup for web scraping
+pandas for data handling
+MongoDB for storing contact form submissions
+SMTP for sending contact form data via email
 
 Technologies Used
 Flask for the web framework
